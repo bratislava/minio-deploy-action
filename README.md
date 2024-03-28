@@ -1,18 +1,4 @@
-# Minio Deploy GitHub Action
- Our fork of this repo is using prebuild image instead of building an image every time when a pipeline runs.
-
-### Build and publish image
-```
-bratiska-cli build_image --tag stable --namespace tools 
-```
-    
-or with docker directly
-```
-docker build -t bratislava/minio-deploy-action:stable --platform linux/amd64 .
-docker push bratislava/minio-deploy-action:stable
-```
-
-
+Our fork of this repo is using prebuild image stored in docker hub, instead of building an image every time when a action runs. This can save arround 2 minutes per pipeline run.
 
 # Readme from fork
 
@@ -67,8 +53,18 @@ jobs:
           target_dir: '/'
 ```
 
+## Development
+
+build an image and publish to docker:
+```
+docker build -t bratislava/minio-deploy-action:stable --platform linux/amd64 .
+docker push bratislava/minio-deploy-action:stable
+```
+
 ## License
 
 Licensed under the MIT license. See [LICENSE](LICENSE).
 
 [minio client]: https://docs.min.io/docs/minio-client-quickstart-guide
+
+
