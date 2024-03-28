@@ -1,6 +1,7 @@
 # Minio Deploy GitHub Action
 
-## Our fork of this repo is using prebiuld image instead of building an image every time when pipeline runs.
+
+### Our fork of this repo is using prebuild image instead of building an image every time when pipeline runs.
 
 
 Run [minio client][] in GitHub Actions to deploy files to Minio object storage.
