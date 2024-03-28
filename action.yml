@@ -1,6 +1,6 @@
 name: 'Minio Deploy'
 description: 'Deploy to Minio Storage'
-author: 'hkdobrev'
+author: 'bratislava'
 inputs:
   endpoint:
     description: 'Minio endpoint of object storage host'
