@@ -1,4 +1,4 @@
-name: 'Minio Deploy'
+name: 'Minio Deploy with prebuild image'
 description: 'Deploy to Minio Storage'
 author: 'bratislava'
 inputs:
