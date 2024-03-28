@@ -3,7 +3,7 @@
 
 ### Build and publish image
 ```
-bratiska-cli build_image --tag minio-deploy-action --namespace tools
+bratiska-cli build_image --tag stable --namespace tools
 ```
     
 
