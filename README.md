@@ -1,6 +1,7 @@
-Our fork of this repo is using prebuild image stored in docker hub, instead of building an image every time when an action runs. This can save around 2 minutes per pipeline run.
+# Improved Minio deploy action
+Our fork of is using prebuild image stored in docker hub, instead of building an image every time when an action runs. This can save around 2 minutes per pipeline run.
 
-# Readme from fork
+## Readme from fork
 
 Run [minio client][] in GitHub Actions to deploy files to Minio object storage.
 
