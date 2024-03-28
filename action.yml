@@ -1,5 +1,5 @@
-name: 'Minio Deploy with prebuild image'
-description: 'Deploy to Minio Storage'
+name: 'Minio upload using built image'
+description: 'Upload files or folders to minio storage with already built image. It will shorten your pipeline time compared to other actions.'
 author: 'bratislava'
 inputs:
   endpoint:
