@@ -1,5 +1,5 @@
 name: 'Minio upload using built image'
-description: 'Upload files or folders to minio storage with already built image. It will shorten your pipeline time compared to other actions.'
+description: 'Upload files or folders to minio storage with already built image. '
 author: 'bratislava'
 inputs:
   endpoint:
