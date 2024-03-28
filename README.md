@@ -1,4 +1,4 @@
-Our fork of this repo is using prebuild image stored in docker hub, instead of building an image every time when a action runs. This can save arround 2 minutes per pipeline run.
+Our fork of this repo is using prebuild image stored in docker hub, instead of building an image every time when an action runs. This can save around 2 minutes per pipeline run.
 
 # Readme from fork
 
@@ -11,16 +11,16 @@ It uses the `mc mirror --overwrite` command to deploy.
 Put the following step in your workflow:
 
 ```yml
-- name: Minio Deploy
-uses: bratislava/minio-deploy-action@v1
-with:
-  endpoint: ${{ secrets.MINIO_ENDPOINT }}
-  access_key: ${{ secrets.MINIO_ACCESS_KEY }}
-  secret_key: ${{ secrets.MINIO_SECRET_KEY }}
-  bucket: 'mybucket'
-  # Optional inputs with their defaults:
-  source_dir: 'public'
-  target_dir: '/'
+  - name: Minio Deploy
+    uses: bratislava/minio-deploy-action@v1
+    with:
+      endpoint: ${{ secrets.MINIO_ENDPOINT }}
+      access_key: ${{ secrets.MINIO_ACCESS_KEY }}
+      secret_key: ${{ secrets.MINIO_SECRET_KEY }}
+      bucket: 'mybucket'
+      # Optional inputs with their defaults:
+      source_dir: 'public'
+      target_dir: '/'
 ```
 
 Workflow example:
@@ -49,7 +49,7 @@ jobs:
           access_key: ${{ secrets.MINIO_ACCESS_KEY }}
           secret_key: ${{ secrets.MINIO_SECRET_KEY }}
           bucket: 'mybucket'
-          source_dir 'public'
+          source_dir: 'public'
           target_dir: '/'
 ```
 
@@ -66,5 +66,3 @@ docker push bratislava/minio-deploy-action:stable
 Licensed under the MIT license. See [LICENSE](LICENSE).
 
 [minio client]: https://docs.min.io/docs/minio-client-quickstart-guide
-
-
