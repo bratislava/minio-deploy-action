@@ -3,9 +3,15 @@
 
 ### Build and publish image
 ```
-bratiska-cli build_image --tag stable --namespace tools
+bratiska-cli build_image --tag stable --namespace tools 
 ```
     
+or with docker directly
+```
+docker build -t bratislava/minio-deploy-action:stable --platform linux/amd64 .
+docker push bratislava/minio-deploy-action:stable
+```
+
 
 
 # Readme from fork

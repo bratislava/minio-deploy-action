@@ -28,7 +28,7 @@ inputs:
     default: 'false'
 runs:
   using: 'docker'
-  image: 'docker://skifahrer/minio-deploy-action:stable'
+  image: 'docker://bratislava/minio-deploy-action:stable'
   env:
     MINIO_ENDPOINT: ${{ inputs.endpoint }}
     MINIO_ACCESS_KEY: ${{ inputs.access_key }}
