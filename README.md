@@ -1,8 +1,14 @@
 # Minio Deploy GitHub Action
+ Our fork of this repo is using prebuild image instead of building an image every time when a pipeline runs.
+
+### Build and publish image
+```
+bratiska-cli build_image --tag minio-deploy-action --namespace tools
+```
+    
 
 
-### Our fork of this repo is using prebuild image instead of building an image every time when pipeline runs.
-
+# Readme from fork
 
 Run [minio client][] in GitHub Actions to deploy files to Minio object storage.
 
@@ -14,7 +20,7 @@ Put the following step in your workflow:
 
 ```yml
 - name: Minio Deploy
-uses: hkdobrev/minio-deploy-action@v1
+uses: bratislava/minio-deploy-action@v1
 with:
   endpoint: ${{ secrets.MINIO_ENDPOINT }}
   access_key: ${{ secrets.MINIO_ACCESS_KEY }}
@@ -45,7 +51,7 @@ jobs:
       - uses: actions/checkout@v1
 
       - name: Minio Deploy
-        uses: hkdobrev/minio-deploy-action@v1
+        uses: bratislava/minio-deploy-action@v1
         with:
           endpoint: ${{ secrets.MINIO_ENDPOINT }}
           access_key: ${{ secrets.MINIO_ACCESS_KEY }}
